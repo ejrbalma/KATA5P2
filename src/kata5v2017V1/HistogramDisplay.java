@@ -1,4 +1,4 @@
-package kata4v2017;
+package kata5v2017V1;
 
 import java.awt.Dimension;
 import org.jfree.chart.ChartFactory;
