@@ -21,7 +21,8 @@ public class DataBaseListMail {
         connect();
 
         String query = "SELECT mail from mail";
-        ResultSet rs = statement.executeQuery(query);
+        rs = queryExecute (query);
+        
         while (rs.next()) {
             if (rs.getString(1).contains("@")) {
                 mailList.add(rs.getString(1));
@@ -43,7 +44,7 @@ public class DataBaseListMail {
         statement.close();
         connection.close();
     }
-    public ResultSet queryExecure (String query) throws SQLException {
+    public static ResultSet queryExecute (String query) throws SQLException {
         return rs = statement.executeQuery(query);
     }
 }
